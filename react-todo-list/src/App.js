@@ -4,12 +4,12 @@ import "./App.css"; // styling
 const initialState = [
   {
     id: 1,
-    title: "delectus aut autem",
+    title: "Answer the void",
     completed: false,
   },
   {
     id: 2,
-    title: "quis ut nam facilis et officia qui",
+    title: "Avoid the void",
     completed: false,
   },
 
