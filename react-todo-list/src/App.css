@@ -1,23 +1,87 @@
-.todo-list-container {
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.todo-input {
-  margin-bottom: 20px;
-}
-
-.todo-item {
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
   display: flex;
+  justify-content: center; /* center content horizontally */
+  align-items: center; /* center content vertically */
+  height: 100vh; /* full viewport height */
+}
+
+.container {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 400px; /* set fixed width for task manager */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* ensures inputs stay aligned */
+}
+
+/* input group - keeps spacing even between inputs */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* even spacing between inputs */
   align-items: center;
-  justify-content: space-between;
+  margin-bottom: 20px; /* adds space before filters */
+}
+
+input, textarea, select, button {
+  width: 95%; /* make all input fields and buttons same width */
   padding: 10px;
   border: 1px solid #ccc;
-  margin-bottom: 10px;
   border-radius: 5px;
 }
 
-button {
-  margin-left: 5px;
+textarea {
+  resize: none; /* prevent text area from resizing randomly */
+  height: 60px; /* keep area consistent with other input fields */
 }
+
+/* ensure even spacing and remove extra margin-bottom */
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* filter group- ensuring even spacing between "All Tasks" and "Sort by Priority" */
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Increased from 10px to 15px to add space */
+  align-items: center;
+  margin-bottom: 20px; /* Adds space before the task list */
+}
+
+.filter-group select {
+  width: 95%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* task display styles */
+.task {
+  background: #fff;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.task select, .task button {
+  width: 100%; /* ensures dropdowns and buttons are full width inside tasks */
+}
+
